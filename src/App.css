@@ -37,6 +37,7 @@ main {
   align-items: center;
   height: 15vh;
   flex: 1;
+  margin-top: 20px;
 }
 
 .control__button {
@@ -54,6 +55,7 @@ main {
 
 .control__button:hover {
   background-color: var(--Neutral--AccentBrown);
+  cursor: pointer;
 }
 
 .control__button:active{
@@ -70,6 +72,7 @@ main {
   flex-direction: column;
   align-items: center;
   flex: 2;
+  margin: 20px;
 }
 
 .content__timer {
@@ -79,6 +82,8 @@ main {
 
 .content__message {
   color: var(--Neutral--MediumBrown);
+  text-align: center;
+  height: 20px;
 }
 
 .content__message::before {
