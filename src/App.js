@@ -5,6 +5,7 @@ import Refresh from "./image/refresh.png";
 import Play from "./image/play.png";
 import Pause from "./image/pause.png";
 import Mouse from "./image/mouse-animal.png";
+const Messages =require("./data/data");
 
 // have an interval function decrease by 1 second from 60 to 0, 
 // then start back at 60 and decrease by 1 minute from 25 to 0.
@@ -15,6 +16,8 @@ function App() {
   const [startTimer, setTimer] = useState(false)
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(25);
+  const [content, setContent] = useState([]);
+  const [currentContentIndex, setIndex] = useState(0);
 
   // Run the inteval for one second every time the app repaints over and over again
   useEffect(() => {
@@ -25,6 +28,10 @@ function App() {
       return ()=> clearInterval(interval);
     }
   },);
+
+  useEffect(()=> {
+    updateContent();
+  },[])
 
   // Countdown the seconds and minutes
   const countdown = () => {
@@ -37,7 +44,30 @@ function App() {
     }else{
       setSeconds(prevSec => prevSec -1);
     }
+    if(seconds % 2 === 0){
+      updateMessage();
+    }
+  }
 
+  const updateContent = () => {
+    fetch("./data/data.json")
+      .then((response) => {response.json()
+      })
+      .then((data) => {
+        if(!data){
+          setContent(Messages.getMessages());
+        }else{
+          setContent(data);
+        }
+      });
+  };
+
+  const updateMessage = () => {
+    if(content.length <= currentContentIndex + 1){
+      setIndex(0)
+    }else{
+      setIndex(prevIndex => prevIndex + 1);
+    }
   }
 
   const start = () => {setTimer(true);}
@@ -67,7 +97,7 @@ function App() {
         </section>
         <section className='content'>
           <p className='content__timer'>{minutes === 0?``:`${minutes}:`}{seconds < 10?`0${seconds}`:seconds}</p>
-          <p className='content__message'>You may delay, but time will not</p>
+          <p className='content__message'>{content[currentContentIndex]}</p>
         </section>
         <section className='animation'>
           <img src={Mouse} alt="" className='animation__animal--style' />
