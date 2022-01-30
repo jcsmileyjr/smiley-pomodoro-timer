@@ -60,7 +60,7 @@ function App() {
           </button>
         </section>
         <section className='content'>
-          <p className='content__timer'>{minutes}:{seconds === 0?`00`:seconds}</p>
+          <p className='content__timer'>{minutes}:{seconds < 10?`0${seconds}`:seconds}</p>
           <p className='content__message'>You may delay, but time will not</p>
         </section>
         <section className='animation'>
