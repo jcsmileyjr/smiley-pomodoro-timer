@@ -13,6 +13,15 @@
   background-color: var(--Primary--DarkBrown);
 }
 
+.test {
+  background-image: url("./image/clock-line.png");
+  background-size: 50px 50px;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  opacity: .2;
+}
+
 main {
   background-color: var(--Primary--LightBrown);
   height: 100vh;
@@ -20,6 +29,7 @@ main {
   margin: 10px auto;
   display: flex;
   flex-direction: column;
+  z-index: 50;
 }
 
 .control {
@@ -44,7 +54,6 @@ main {
 
 .control__button--style {
   height: 5vh;
-  /* width: 10vw; */
 }
 
 .content {
@@ -82,16 +91,17 @@ main {
   height: 100px;
   right: 100px;
   top: 50px;
+  opacity: 100%;
 }
 
 @media only screen and (min-width: 600px) {
   .App {
     height: 100vh;
   }
-
+  
   main{
     height: 80%;
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
 

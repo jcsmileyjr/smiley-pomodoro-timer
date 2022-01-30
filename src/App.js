@@ -8,6 +8,7 @@ import Mouse from "./image/mouse-animal.png";
 function App() {
   return (
     <div className="App">
+      <section className='test'></section>
       <main>
         <section className='control'>
           <button type="button" className='control__button'>
