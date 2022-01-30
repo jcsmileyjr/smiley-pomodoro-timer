@@ -96,7 +96,7 @@ function App() {
           </button>
         </section>
         <section className='content'>
-          <p className='content__timer'>{minutes === 0?``:`${minutes}:`}{seconds < 10?`0${seconds}`:seconds}</p>
+          <h1 className='content__timer'>{minutes === 0?``:`${minutes}:`}{seconds < 10?`0${seconds}`:seconds}</h1>
           <p className='content__message'>{content[currentContentIndex]}</p>
         </section>
         <section className='animation'>
