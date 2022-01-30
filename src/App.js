@@ -25,7 +25,7 @@ function App() {
         </section>
         <section className='content'>
           <p className='content__timer'>25:00</p>
-          <p className='content__message'>"You may delay, but time will not"</p>
+          <p className='content__message'>You may delay, but time will not</p>
         </section>
         <section className='animation'>
           <img src={Mouse} alt="" className='animation__animal--style' />

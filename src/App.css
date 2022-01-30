@@ -63,6 +63,14 @@ main {
   color: var(--Neutral--MediumBrown);
 }
 
+.content__message::before {
+  content:'"';
+}
+
+.content__message::after {
+  content:'"';
+}
+
 .animation {
   position:relative;
   flex: 2;
@@ -80,7 +88,7 @@ main {
   .App {
     height: 100vh;
   }
-  
+
   main{
     height: 80%;
     width: 80%;
