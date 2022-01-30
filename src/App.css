@@ -2,8 +2,7 @@
   --Primary--DarkBrown: hsl(40, 70%, 45%);
   --Primary--LightBrown: hsl(36, 55%, 85%);
   --Neutral--MediumBrown: hsl(40, 93%, 11%);
-  /*40, 56%, 45%*/
-  /*40, 70%, 45%*/
+  --Neutral--AccentBrown: hsl(40, 50%, 56%);
 }
 
 .App {
@@ -51,6 +50,15 @@ main {
   border: none;
   color: var(--Neutral--MediumBrown);
   box-shadow: 2px 6px 12px var(--Neutral--MediumBrown);
+}
+
+.control__button:hover {
+  background-color: var(--Neutral--AccentBrown);
+}
+
+.control__button:active{
+  box-shadow: 2px 2px 12px var(--Neutral--MediumBrown);
+  transform: translateY(4px);
 }
 
 .control__button--style {
