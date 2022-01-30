@@ -13,26 +13,32 @@ import Mouse from "./image/mouse-animal.png";
 
 function App() {
   const [startTimer, setTimer] = useState(false)
-  const [seconds, setSeconds] = useState(10);
-  const [minutes, setMinutes] = useState(24);
+  const [seconds, setSeconds] = useState(0);
+  const [minutes, setMinutes] = useState(25);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      //setSeconds(prevSec => prevSec -1);
-      play();
-    }, 1000);
-    return ()=> clearInterval(interval);
+    if(startTimer){
+      const interval = setInterval(() => {
+        play();
+      }, 1000);
+      return ()=> clearInterval(interval);
+    }
   },);
 
   const play = () => {
     if(seconds === 0){
-      setSeconds(10)
+      setSeconds(59)
       setMinutes(prevMin => prevMin -1);
     }else{
       setSeconds(prevSec => prevSec -1);
     }
-
   }
+
+  const start = () => {setTimer(true);}
+
+  const pause = () => {setTimer(false);}
+
+  const refresh = () => {setSeconds(0); setMinutes(25)}
   
 
   return (
@@ -40,15 +46,15 @@ function App() {
       <section className='test'></section>
       <main>
         <section className='control'>
-          <button type="button" className='control__button'>
+          <button type="button" className='control__button' onClick={()=> {refresh()}}>
             <img src={Refresh} alt="" className='control__button--style' />
             <label>Restart</label>
           </button>
-          <button type="button" className='control__button' onClick={()=> {}}>
+          <button type="button" className='control__button' onClick={()=> {start()}}>
             <img src={Play} alt="" className='control__button--style' />
             <label>Restart</label>
           </button>
-          <button type="button" className='control__button'>
+          <button type="button" className='control__button' onClick={()=> {pause()}}>
             <img src={Pause} alt="" className='control__button--style' />
             <label>Restart</label>
           </button>
