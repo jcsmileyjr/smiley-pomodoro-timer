@@ -50,6 +50,7 @@ main {
   background-color: var(--Primary--DarkBrown);
   border: none;
   color: var(--Neutral--MediumBrown);
+  box-shadow: 2px 6px 12px var(--Neutral--MediumBrown);
 }
 
 .control__button--style {
