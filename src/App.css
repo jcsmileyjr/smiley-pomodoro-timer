@@ -1,18 +1,25 @@
+:root {
+  --Primary--DarkBrown: hsl(40, 70%, 45%);
+  --Primary--LightBrown: hsl(36, 55%, 85%);
+  --Neutral--MediumBrown: hsl(40, 93%, 11%);
+  /*40, 56%, 45%*/
+  /*40, 70%, 45%*/
+}
+
 .App {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
-  /* justify-content: center;
-  align-items: center; */
-  background-color: hsl(40, 56%, 45%);
+  background-color: var(--Primary--DarkBrown);
 }
 
 main {
-  /*background-color: hsl(36, 21%, 97%);*/
-  background-color: hsl(36, 55%, 85%);
+  background-color: var(--Primary--LightBrown);
   height: 100vh;
   width:90vw;
   margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .control {
@@ -20,6 +27,7 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 15vh;
+  flex: 1;
 }
 
 .control__button {
@@ -28,22 +36,62 @@ main {
   justify-content: space-around;
   align-items: center;
   height: 10vh;
+  width: 20vw;
+  background-color: var(--Primary--DarkBrown);
+  border: none;
+  color: var(--Neutral--MediumBrown);
 }
 
 .control__button--style {
   height: 5vh;
-  width: 10vw;
+  /* width: 10vw; */
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+}
 
-.content__animal--style {
+.content__timer {
+  font-size: xxx-large;
+  color: var(--Neutral--MediumBrown);
+}
+
+.content__message {
+  color: var(--Neutral--MediumBrown);
+}
+
+.animation {
+  position:relative;
+  flex: 2;
+}
+
+.animation__animal--style {
+  position: absolute;
+  bottom: 10;
   height: 100px;
+  right: 100px;
+  top: 50px;
 }
 
 @media only screen and (min-width: 600px) {
+  .App {
+    height: 100vh;
+  }
+  
   main{
     height: 80%;
     width: 80%;
     margin: auto;
+  }
+
+  .control__button {
+    width: 15vw;
+  }
+
+  .content__timer {
+    font-size: 60px;
   }
 }

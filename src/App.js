@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        <div className='control'>
+        <section className='control'>
           <button type="button" className='control__button'>
             <img src={Refresh} alt="" className='control__button--style' />
             <label>Restart</label>
@@ -22,14 +22,14 @@ function App() {
             <img src={Pause} alt="" className='control__button--style' />
             <label>Restart</label>
           </button>
-        </div>
-        <div className='content'>
+        </section>
+        <section className='content'>
           <p className='content__timer'>25:00</p>
           <p className='content__message'>"You may delay, but time will not"</p>
-          <div className='content__animation--container'>
-            <img src={Mouse} alt="" className='content__animal--style' />
-          </div>
-        </div>
+        </section>
+        <section className='animation'>
+          <img src={Mouse} alt="" className='animation__animal--style' />
+        </section>
       </main>
     </div>
   );
