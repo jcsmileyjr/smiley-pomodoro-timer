@@ -16,22 +16,28 @@ function App() {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(25);
 
+  // Run the inteval for one second every time the app repaints over and over again
   useEffect(() => {
     if(startTimer){
       const interval = setInterval(() => {
-        play();
+        countdown();
       }, 1000);
       return ()=> clearInterval(interval);
     }
   },);
 
-  const play = () => {
+  // Countdown the seconds and minutes
+  const countdown = () => {
+    if(seconds === 1 && minutes === 0){pause()} //End countdown
+
+    //Determines when to restart seconds and reduce minutes
     if(seconds === 0){
       setSeconds(59)
       setMinutes(prevMin => prevMin -1);
     }else{
       setSeconds(prevSec => prevSec -1);
     }
+
   }
 
   const start = () => {setTimer(true);}
