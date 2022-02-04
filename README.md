@@ -1,13 +1,13 @@
 # Pomodoroo Timer built with React
 
-![Final Outcome](src\image\final-release.gif)
+![Final Outcome](./src/image/final-release.gif)
 
 ### The challenge
 
 - Build out a pomodoro timer with constantly changing time quotes.
 
 ### Initial Wireframe
-![Wireframe of project](src\image\desktop-A4-new.png)
+![Wireframe of project](./src/image/desktop-A4-new.png)
 
 ### Links
 
