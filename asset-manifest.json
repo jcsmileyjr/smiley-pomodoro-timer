@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/smiley-pomodoro-timer/static/css/main.b4e2c067.css",
+    "main.js": "/smiley-pomodoro-timer/static/js/main.0ce8703d.js",
+    "static/js/787.5dcde329.chunk.js": "/smiley-pomodoro-timer/static/js/787.5dcde329.chunk.js",
+    "index.html": "/smiley-pomodoro-timer/index.html",
+    "main.b4e2c067.css.map": "/smiley-pomodoro-timer/static/css/main.b4e2c067.css.map",
+    "main.0ce8703d.js.map": "/smiley-pomodoro-timer/static/js/main.0ce8703d.js.map",
+    "787.5dcde329.chunk.js.map": "/smiley-pomodoro-timer/static/js/787.5dcde329.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4e2c067.css",
+    "static/js/main.0ce8703d.js"
+  ]
+}
