@@ -11,8 +11,8 @@
 
 ### Links
 
-- [Coming soon](https://jcsmileyjr.github.io/Time-Tracking-Dashboard/)
-- [Coming soon!!!](https://dev.to/jcsmileyjr/frontend-challenge-12-time-tracking-dashboard-jdc)
+- [Click to play with the app](https://jcsmileyjr.github.io/smiley-pomodoro-timer/)
+- [Blog post Coming soon!!!](https://dev.to/jcsmileyjr/frontend-challenge-12-time-tracking-dashboard-jdc)
 
 ### Built with
 
